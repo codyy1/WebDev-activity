@@ -90,3 +90,120 @@
   </script>
 </body>
 </html>
+
+
+
+
+//styles.css
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .container {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .card h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  
+  input[type="number"], select {
+    border-radius: 5px;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  
+  #result {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+ 
+  .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+ 
+  .mt-3 {
+    margin-top: 1.5rem;
+  }
+
+
+
+
+//script.js
+<><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script><script>
+    document.getElementById('calculatorForm').addEventListener('submit', function(event) {event.preventDefault()};
+
+
+    const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+    const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+    const operation = document.getElementById('operation').value;
+
+    let result;
+
+
+    switch(operation) { }
+    case 'add':
+    result = firstNumber + secondNumber;
+    break;
+    case 'subtract':
+    result = firstNumber - secondNumber;
+    break;
+    case 'multiply':
+    result = firstNumber * secondNumber;
+    break;
+    case 'divide':
+    if(secondNumber !== 0) {result = firstNumber / secondNumber};
+    {"}"} else {result = 'Cannot divide by 0'};
+    {"}"}
+    break;
+    default:
+    result = 'Invalid operation';
+    {"}"}
+
+
+    document.getElementById('result').textContent = result;
+    {"}"});
+</script></>
+
+  
